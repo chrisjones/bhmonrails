@@ -1,3 +1,170 @@
-// Place all the styles related to the home_page controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #595959;
+  background-size: 800px 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+  font-size: 16px;
+  font-family: "Asap", sans-serif;
+}
+
+#main {
+  width: 550px;
+}
+
+.hero {
+}
+
+h1 {
+  text-align: center;
+}
+
+h1 svg {
+  width: 350px;
+}
+
+h2 {
+  color: #FFF;
+  font-size: 30px;
+  text-align: center;
+  margin: -10px 0 25px 0;
+
+}
+
+.details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-top: 1px solid rgba(255,255,255,.2);
+  border-bottom: 1px solid rgba(255,255,255,.2);
+  grid-column-gap: 2px;
+}
+
+.details div {
+  padding: 30px 0;
+}
+
+.links,
+.location {
+  display: flex;
+  justify-content: center;
+}
+
+.location strong {
+  font-size: 24px;
+  margin: 0 0 9px 0;
+  font-weight: 700;
+  display: block;
+}
+
+.location strong a {
+  color: #FFB400;
+}
+
+address {
+  font-weight: 600;
+  font-style: normal;
+  line-height: 22px;
+}
+
+address a {
+  display: block;
+  color: #fff;
+}
+
+.links a {
+  display: block;
+  background-position: 0 center;
+  background-repeat: no-repeat;
+  height: 16px;
+  line-height: 16px;
+  padding: 0 0 0 25px;
+  margin: 0 0 12px 0;
+  text-decoration: none;
+  color: #fff;
+  transition: color .25s ease-in-out;
+}
+
+.links a:last-child {
+  margin: 0;
+}
+
+.links a:hover {
+  color: #CE3333;
+}
+
+.links a.twitter {
+  background-image: url(/web/20190712050742im_/http://rubyconf.org/img/twitter.svg);
+}
+
+.links a.contact {
+  background-image: url(/web/20190712050742im_/http://rubyconf.org/img/contact.svg);
+}
+
+.links a.rubyconf2018 {
+  background-image: url(/web/20190712050742im_/http://rubyconf.org/img/2018.svg);
+}
+
+footer {
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+}
+
+footer a {
+  color: #FFB400;
+  text-decoration: none;
+  display: inline-block;
+}
+
+@media screen and (max-width: 650px) {
+  body {
+    display: block;
+    background-image: none;
+  }
+  .hero {
+  }
+  h1 {
+    font-size: 30px;
+  }
+  h2 {
+    font-size: 24px;
+  }
+  #main,
+  .banner {
+    width: auto;
+  }
+  .details {
+    grid-template-columns: 1fr;
+    background: none;
+  }
+  .details div {
+    padding: 0;
+  }
+  address {
+    padding: 15px 30px;
+  }
+  .links,
+  .location {
+    display: block;
+  }
+  .links a {
+    height: 50px;
+    line-height: 50px;
+    margin: 0;
+    border-top: 1px solid rgba(255,255,255,.2);
+    padding-left: 55px;
+    background-position: 30px center;
+  }
+  footer {
+    height: auto;
+    padding: 15px 30px;
+    line-height: 22px;
+    text-align: left;
+  }
+}
