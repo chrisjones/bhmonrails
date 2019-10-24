@@ -1,24 +1,19 @@
-<div id="main">
-  <div class="hero">
-    <h1><%= image_tag "Birmingham_on_Rails_Logo.svg", width: 350 %></h1>
-    <h2>January 30th - 31st, 2020</h2>
-  </div>
-  <div class="details">
-    <div class="location">
-      <address>
-        <strong>
-          <a href="https://www.mcwane.org/" target="_blank">McWane Science Center</a>
-          <a href="https://bit.ly/31k0JQg" target="_blank">200 19th Street N</a>
-          <a href="https://bit.ly/31k0JQg" target="_blank">Birmingham, AL 35203</a>
-        </strong>
-      </address>
-
+<section>
+  <div class="flex flex-col my-4 my-8 md:m-0 md:justify-center items-center h-screen">
+    <div class="flex items-center">
+      <%= image_tag "Birmingham_on_Rails_Logo.svg", class: "w-32 md:w-48" %>
+      <div class="flex ml-6 md:ml-8 flex-col">
+        <p class="md:text-5xl mb-0">Birmingham On Rails</p>
+        <p class="md:text-xl border-t mt-3 pt-3">January 30th - 31st, 2020</p>
+        <p class="md:text-md border-t mt-3 pt-3"><a href="https://www.mcwane.org/" target="_blank" class="underline">McWane Science Center</a></p>
+        <p class="md:text-md mt-1 pt-1"><a href="https://bit.ly/31k0JQg" target="_blank" class="underline">200 19th Street N</a></p>
+        <p class="md:text-md mt-1 pt-1"><a href="https://bit.ly/31k0JQg" target="_blank" class="underline">Birmingham, AL 35203</a></p>
+        <p class="text-sm mt-3">Follow us on <a href="https://twitter.com/bhmonrails" target="_blank" class="underline">Twitter</a></p>
+      </div>
     </div>
-    <div class="links">
-      <nav>
-        <a class="twitter" href="https://twitter.com/bhmonrails">@bhmonrails</a>
-        <a class="contact" href="mailto:someemail@gmail.com">someemail@gmail.com</a>
-      </nav>
+    <div class="mt-12 border-t border-b px-2 py-2">
+      <p class="text-sm mt-2">Intereseted in being a sponor?</p>
+      <p class="text-sm mt-2">Email us at <a href="mailto:info@birminghamonrails.com">info@birminghamonrails.com</a></p>
     </div>
   </div>
-</div>
+</section>
