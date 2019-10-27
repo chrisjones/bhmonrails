@@ -38,6 +38,15 @@ main {
   display: block;
 }
 
+input[type=submit]{
+  background-color: black;
+  width: 3rem;
+}
+
+input[type=text]{
+  margin-right: 1rem;
+  margin-top: 1rem;
+}
 /**
  * Correct the font size and margin on `h1` elements within `section` and
  * `article` contexts in Chrome, Firefox, and Safari.
@@ -560,6 +569,10 @@ img {
 
 .text-white {
   color: #fff;
+}
+
+.text-red {
+  color: #A52B22;
 }
 
 .text-sm {

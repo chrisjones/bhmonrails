@@ -8,11 +8,17 @@
         <p class="md:text-md border-t mt-3 pt-3"><a href="https://www.mcwane.org/" target="_blank" class="underline">McWane Science Center</a></p>
         <p class="md:text-md mt-1 pt-1"><a href="https://bit.ly/31k0JQg" target="_blank" class="underline">200 19th Street N</a></p>
         <p class="md:text-md mt-1 pt-1"><a href="https://bit.ly/31k0JQg" target="_blank" class="underline">Birmingham, AL 35203</a></p>
+        <p class="md:text-md mt-1 pt-3">Join the mailing list!</p>
+        <%= form_for :lead do |f| %>
+          <%= f.text_field :email %>
+          <%= f.submit "Join" %>
+        <% end %>
+        <p class="md:text-md mt-1 pt-3"><%= notice %></p>
         <p class="text-sm mt-3">Follow us on <a href="https://twitter.com/bhmonrails" target="_blank" class="underline">Twitter</a></p>
       </div>
     </div>
     <div class="mt-12 border-t border-b px-2 py-2">
-      <p class="text-sm mt-2">Intereseted in being a sponor?</p>
+      <p class="text-sm mt-2">Interested in being a sponor?</p>
       <p class="text-sm mt-2">Email us at <a href="mailto:info@birminghamonrails.com">info@birminghamonrails.com</a></p>
     </div>
   </div>
