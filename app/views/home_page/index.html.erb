@@ -1,25 +1,224 @@
-<section>
-  <div class="flex flex-col my-4 my-8 md:m-0 md:justify-center items-center h-screen">
-    <div class="flex items-center">
-      <%= image_tag "Birmingham_on_Rails_Logo.svg", class: "w-32 md:w-48" %>
-      <div class="flex ml-6 md:ml-8 flex-col">
-        <p class="md:text-5xl mb-0">Birmingham On Rails</p>
-        <p class="md:text-xl border-t mt-3 pt-3">January 30th - 31st, 2020</p>
-        <p class="md:text-md border-t mt-3 pt-3"><a href="https://www.mcwane.org/" target="_blank" class="underline">McWane Science Center</a></p>
-        <p class="md:text-md mt-1 pt-1"><a href="https://bit.ly/31k0JQg" target="_blank" class="underline">200 19th Street N</a></p>
-        <p class="md:text-md mt-1 pt-1"><a href="https://bit.ly/31k0JQg" target="_blank" class="underline">Birmingham, AL 35203</a></p>
-        <p class="md:text-md mt-1 pt-3">Join the mailing list!</p>
-        <%= form_for :lead do |f| %>
-          <%= f.text_field :email %>
-          <%= f.submit "Join" %>
-        <% end %>
-        <p class="md:text-md mt-1 pt-3"><%= notice %></p>
-        <p class="text-sm mt-3">Follow us on <a href="https://twitter.com/bhmonrails" target="_blank" class="underline">Twitter</a></p>
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title>Birmingham On Rails | Birmingham, AL | January 30-31, 2020</title>
+    <meta name="description" content="Celebrating Ruby on Rails in the Iron City.">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta property="og:image" content="https://www.bhmonrails.com/assets/logo.png" />
+    <meta property="og:title" content="Birmingham On Rails | Birmingham, AL | January 30-31, 2020" />
+    <meta name="twitter:card" content="summary_large_image">
+    </meta>
+    <meta name="twitter:site" content="@bhmonrails">
+    </meta>
+    <meta name="twitter:creator" content="@bhmonrails">
+    </meta>
+    <meta name="twitter:title" content="Birmingham On Rails | Birmingham, AL | January 30-31, 2020">
+    </meta>
+    <meta name="twitter:description" content="Celebrating Ruby on Rails in the Iron City.">
+    </meta>
+  </head>
+
+  <body class="bg-grey-lightest">
+    <div class="bg-red-light h-2"></div>
+    <div class="flex flex-col md:flex-row justify-center items-center px-2 py-4 md:p-8 m-2 md:m-8">
+      <img src="./crest.svg" class="w-24 md:w-32" alt="Birmingham on Rails Logo" />
+      <div class="ml-0 md:ml-6 text-center md:text-left mt-4 md:mt-0">
+        <h1 class="mb-2">Birmingham On Rails 2020</h1>
+        <h3 class="font-normal">
+          <a href="#schedule" class="no-underline font-semibold text-red-light hover:text-red hover:underline">January
+            30-31</a> at <a href="#location"
+            class="no-underline font-semibold text-red-light hover:text-red hover:underline">McWane Center</a> in
+          Birmingham, AL
+        </h3>
       </div>
     </div>
-    <div class="mt-12 border-t border-b px-2 py-2">
-      <p class="text-sm mt-2">Interested in being a sponor?</p>
-      <p class="text-sm mt-2">Email us at <a href="mailto:info@birminghamonrails.com">info@birminghamonrails.com</a></p>
+    <div class="mb-8 text-center">
+      <h1 class="text-red-light mb-3">Attending the conference?</h1>
+      <p class="text-xl">We've put together a guide for the conference. It has the schedule and some other goodies.</p>
+      <div class="mt-8 pt-2 mb-8 pb-4">
+        <a href="/howdy.html"
+          class="bg-red-light hover:bg-red text-white md:text-lg font-semibold px-6 py-4 rounded no-underline mt-6 md:mt-0 md:ml-4">
+          See the Guide
+        </a>
+      </div>
     </div>
-  </div>
-</section>
+    <div id="cover" class="bg-cover bg-center p-8 text-center">
+      <div class="p-8 text-3xl tracking-normal">
+        <img src="./ruby.svg" class="w-32" alt="Ruby">
+        <p class="text-white mt-4 leading-normal">Celebrating <span class="font-semibold">Ruby on Rails</span> in the
+          Iron City and across the south.</p>
+      </div>
+    </div>
+    <div class="px-6 py-4 md:p-8 bg-red-light text-white text-center md:text-left">
+      <div class="py-4 md:py-8 container mx-auto flex flex-col md:flex-row items-center">
+        <img src="./workshop.svg" class="w-64 max-w-full mb-8 md:mb-0 md:mr-8 md:w-2/5" alt="">
+        <div class="mt-4 md:mt-0 md:ml-8 md:w-3/5">
+          <h1 class="mb-4">Workshops</h1>
+          <p class="md:text-lg leading-normal">
+            Some Text about workshops!
+          </p>
+          <p class="md:text-lg leading-normal mt-4">Workshops are available as a conference ticket add-on for an
+            additional <strong>$$$</strong>.</p>
+        </div>
+      </div>
+    </div>
+    <div id="schedule" class="container mx-auto text-center px-2 py-4 md:p-8 m-2 md:my-8">
+      <h1>Schedule</h1>
+      <div class="flex justify-around text-center flex-col md:flex-row mt-8">
+        <div class="md:w-1/2 md:border-r-2 mb-4">
+          <h2>Thursday</h2>
+          <h3 class="text-red-light uppercase mt-2">Workshop Day</h3>
+          <hr class="border-t-2 mt-4">
+          <h4
+            class="text-left w-full bg-grey-lighter border-l-4 border-b-4 border-red-light text-red-light p-4 -mt-2 mb-4">
+            Morning Sessions</h4>
+          <div class="py-2 px-6">
+            <div class="flex items-start w-full">
+              <img src="https://secure.gravatar.com/avatar/eceef9c09ab1fb1bd8a997551777a66d?s=500"
+                class="rounded-full w-24 h-24" alt="">
+              <div class="ml-4 text-left">
+                <h3 class="font-normal">Workshop Leader</h3>
+                <hr class="border-b border">
+                <h4 class="text-red-light my-1 leading-normal tracking-normal">Workshop Title</h4>
+                <p class="text-xs leading-normal">Workshop Description.</p>
+              </div>
+            </div>
+            <div class="flex items-start w-full mt-6">
+              <img src="https://secure.gravatar.com/avatar/4fa58c43c72a15d2d560ffd931fbe9bb?s=500"
+                class="rounded-full w-24 h-24" alt="">
+              <div class="ml-4 text-left">
+                <h3 class="font-normal">Jason Swett</h3>
+                <hr class="border-b border">
+                <h4 class="text-red-light my-1 leading-normal tracking-normal">Workshop Title</h4>
+                <p class="text-xs leading-normal">Workshop Description</p>
+              </div>
+            </div>
+          </div>
+          <h4 class="text-left w-full bg-grey-lighter border-l-4 border-b-4 border-red-light text-red-light p-4 my-4">
+            Afternoon Sessions</h4>
+          <div class="py-2 px-6">
+            <div class="flex items-start w-full">
+              <img src="https://secure.gravatar.com/avatar/5e8107f48d4471a40de325151d589b6d?s=500"
+                class="rounded-full w-24 h-24" alt="">
+              <div class="ml-4 text-left">
+                <h3 class="font-normal">Speaker Name</h3>
+                <hr class="border-b border">
+                <h4 class="text-red-light my-1 leading-normal tracking-normal">Talk Title</h4>
+                <p class="text-xs leading-normal">Talk Description</p>
+              </div>
+            </div>
+            <div class="w-full mt-6">
+              <div class="flex mb-4">
+                <img src="./speakers/speakerpic.png" class="rounded-full w-24 h-24 mr-4" alt="">
+                <img src="https://avatars2.githubusercontent.com/u/547981?s=460&v=4" class="rounded-full w-24 h-24"
+                  alt="">
+              </div>
+              <div class="text-left">
+                <h3 class="font-normal">Speaker Name</h3>
+                <hr class="border-b border">
+                <h4 class="text-red-light my-1 leading-normal tracking-normal">Talk Title</h4>
+                <p class="text-xs leading-normal">Talk Description</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="location" class="px-6 py-4 md:p-8 bg-red-light text-white text-center md:text-left">
+      <div class="py-4 md:py-8 container mx-auto flex flex-col md:flex-row items-center">
+        <div class="md:mr-8 md:w-3/5">
+          <h1 class="mb-4">Location</h1>
+          <p class="md:text-lg leading-normal">
+            We'll be in downtown Birmingham at the <strong>McWane Center</strong>. The McWane Center is located across from the
+            Pizits Food Hall. Looking for more? Downtown Birmingham is very walkable, with several coffee shops, pubs, and resturants
+            nearby. 
+          </p>
+        </div>
+        <img src="./mcwane.jpg" class="md:w-2/5 max-w-full md:ml-8 rounded mt-6 md:mt-0" alt="">
+      </div>
+    </div>
+    <div id="tickets" class="container mx-auto text-center px-2 py-4 md:p-8 m-2 md:my-8">
+      <h1>Tickets</h1>
+      <!-- Ticket Tailor Widget. Paste this in to your website where you want the widget to appear. Do no change the code or the widget may not work properly. -->
+      <div class="tt-widget mt-8">
+        <div class="tt-widget-fallback">
+          <p><a href="https://www.tickettailor.com/checkout/view-event/id/254192/chk/30b8/ref/website_widget/"
+              target="_blank">Click here to buy tickets</a><br /><small><a href="http://www.tickettailor.com?rf=wdg"
+                class="tt-widget-powered">Sell tickets online with Ticket Tailor</a></small></p>
+        </div>
+        <script src="https://media.tickettailor.com/js/widgets/min/tt-widget.js"
+          data-url="https://www.tickettailor.com/checkout/view-event/id/254192/chk/30b8/ref/website_widget/"
+          data-type="inline" data-inline-minimal="false" data-inline-show-logo="true"
+          data-inline-bg-fill="true"></script>
+      </div>
+      <!-- End of Ticket Tailor Widget -->
+    </div>
+    <div class="px-6 py-4 md:p-8 bg-red-light text-white text-center md:text-left">
+      <div class="py-4 md:py-8 container mx-auto flex flex-col md:flex-row items-center">
+        <img src="./sponsorship.svg" class="w-64 max-w-full mb-8 md:mb-0 md:mr-8 md:w-2/5" alt="">
+        <div class="mb-6 md:mb-0 md:ml-8 md:w-3/5">
+          <h1 class="mb-4">Sponsorship</h1>
+          <p class="md:text-lg leading-normal">
+            Sponsors are the <a class="text-white font-semibold"
+              href="https://getyarn.io/yarn-clip/ba21e9ef-67c5-4842-8a2f-53f6ae99c82d" target="_blank">lifeblood</a> of
+            Southeast Ruby.
+          </p>
+          <p class="md:text-lg leading-normal mt-4">Are you interested in partnering with Birmingham on Rails as a sponsor?
+            We've had sponsors partner with us to gain exposure to their product, meet potential hires, and simply
+            support the Ruby and Rails communities.</p>
+          <p class="md:text-lg leading-normal mt-4">We'd love to work together. Email <a
+              class="no-underline font-semibold text-white"
+              href='mail&#116;o&#58;&#101;r&#110;ie&#64;&#115;ou%74hea&#115;t&#37;72%&#55;5%62%7&#57;&#46;&#99;o&#109;'>e&#114;n&#105;e&#64;s&#111;&#117;the&#97;struby&#46;c&#111;&#109;</a>
+            for more information.</p>
+        </div>
+      </div>
+    </div>
+    <div class="container text-center mt-8 pt-8 mx-auto">
+      <h1>2020 Sponsors</h1>
+      <div class="my-6 pt-1 pb-4">
+        <h4 class="mb-4">Gold</h4>
+        <div class="flex items-center justify-center">
+          <div class="mx-6">
+          </div>
+          <div class="mx-6">
+          </div>
+        </div>
+      </div>
+      <div class="my-6 pb-4">
+        <h4 class="mb-4">Silver</h4>
+        <div>
+        </div>
+      </div>
+      <div class="my-6 pb-4">
+        <h4 class="mb-4">Bronze</h4>
+        <div class="flex items-center justify-center">
+          <div class="ml-6 mr-8">
+          </div>
+          <div class="mr-6 ml-8">
+          </div>
+          <div class="mx-6">
+          </div>
+        </div>
+      </div>
+      <div class="my-6">
+        <h4 class="mb-4">Community</h4>
+        <div class="flex items-center justify-center">
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="container mx-auto text-center p-8 m-8">
+      <h1>Code of Conduct</h1>
+      <p class="mt-4 leading-normal">We want Birmingham on Rails to be a safe space for <strong>everyone</strong>. All
+        attendees, speakers, sponsors and volunteers at the conference and conference-related events are required to
+        abide by the <a class="font-semibold no-underline text-red-light hover:underline" target="_blank"
+          href="http://confcodeofconduct.com/">code of conduct</a>.</p>
+    </div>
+    <div class="container mx-auto text-center p-4 m-4">
+      <span class="font-light">&copy; Whatever our corp thing is</span>
+    </div>
+  </body>
+
+</html>
