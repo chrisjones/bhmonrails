@@ -1,11 +1,14 @@
 class LeadsController < ApplicationController
   def create
-    @lead = Lead.new(lead_params)
-    respond_to do |format|
-      if @lead.save
-        format.html { redirect_to root_url, notice: "Congrats! You are added to the list" }
+    if Lead.exists?(email: params[:lead][:email])
+      redirect_to root_url, alert: "Email is already in database."
+    else  
+      lead = Lead.new(lead_params)
+
+      if lead.valid_email? && lead.save
+        redirect_to root_url, notice: "Congrats! You are added to the list!"
       else
-        format.html { redirect_to root_url, notice: "Woops...something went wrong. Please make sure it is a valid email" }
+        redirect_to root_url, alert: "Something is wrong. Did you enter a valid email address?"
       end
     end
   end

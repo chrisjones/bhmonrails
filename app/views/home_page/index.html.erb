@@ -3,23 +3,40 @@
     <div class="flex items-center">
       <%= image_tag "Birmingham_on_Rails_Logo.svg", class: "w-32 md:w-48" %>
       <div class="flex ml-6 md:ml-8 flex-col">
-        <p class="md:text-5xl mb-0">Birmingham On Rails</p>
-        <p class="md:text-xl border-t mt-3 pt-3">January 30th - 31st, 2020</p>
-        <p class="md:text-md border-t mt-3 pt-3"><a href="https://www.mcwane.org/" target="_blank" class="underline">McWane Science Center</a></p>
-        <p class="md:text-md mt-1 pt-1"><a href="https://bit.ly/31k0JQg" target="_blank" class="underline">200 19th Street N</a></p>
-        <p class="md:text-md mt-1 pt-1"><a href="https://bit.ly/31k0JQg" target="_blank" class="underline">Birmingham, AL 35203</a></p>
-        <p class="md:text-md mt-1 pt-3">Join the mailing list!</p>
-        <%= form_for :lead do |f| %>
-          <%= f.text_field :email %>
-          <%= f.submit "Join" %>
+        <p class="md:text-5xl mb-0 ml-1">Birmingham On Rails</p>
+        <p class="md:text-xl border-t mt-3 pt-3 ml-1">January 30th - 31st, 2020</p>
+        <p class="md:text-md border-t mt-3 pt-3 ml-1"><a href="https://www.mcwane.org/" target="_blank" class="underline">McWane Science Center</a></p>
+        <p class="md:text-md mt-1 pt-1 ml-1"><a href="https://bit.ly/31k0JQg" target="_blank" class="underline">200 19th Street N</a></p>
+        <p class="md:text-md mt-1 pt-1 ml-1"><a href="https://bit.ly/31k0JQg" target="_blank" class="underline">Birmingham, AL 35203</a></p>
+        <p class="md:text-md mt-1 pt-3 ml-1">Join the mailing list!</p>
+        <%= form_for @lead, url: root_path do |f| %>
+          <%= f.text_field :email, class: "p-1 rounded ml-1" %>
+          <%= f.submit "Join", class: "p-1 rounded ml-1" %>
         <% end %>
-        <p class="md:text-md mt-1 pt-3"><%= notice %></p>
-        <p class="text-sm mt-3">Follow us on <a href="https://twitter.com/bhmonrails" target="_blank" class="underline">Twitter</a></p>
+        
+				<%- if notice %>
+				  <p class="md:text-md mt-1 pt-3 ml-1"><font color="green"><%= notice %></font></p>
+				<%- end %>
+				<%- if alert %>
+          <p class="md:text-md mt-1 pt-3 ml-1"><font color="red"><%= alert %></font></p>
+				<%- end %>
+				
+        <p class="text-sm mt-3 ml-1">Follow us on <a href="https://twitter.com/bhmonrails" target="_blank" class="underline">Twitter</a></p>
       </div>
     </div>
-    <div class="mt-12 border-t border-b px-2 py-2">
-      <p class="text-sm mt-2">Interested in being a sponor?</p>
+    <div class="flex items-center">
+			<p class="w-32 md:w-32">&nbsp;</p>
+			<div class="flex ml-6 md:ml-8 flex-col border-t border-b">
+	      <p class="text-sm mt-2">Interested in being a sponsor?</p>
+        <p class="text-sm mt-2">Email us at <a href="mailto:info@birminghamonrails.com">info@birminghamonrails.com</a></p>
+		  </div>
+		</div>
+		
+		<!--
+		<div class="mt-12 border-t border-b px-2 py-2">
+		  <p class="text-sm mt-2">Interested in being a sponsor?</p>
       <p class="text-sm mt-2">Email us at <a href="mailto:info@birminghamonrails.com">info@birminghamonrails.com</a></p>
     </div>
+			-->
   </div>
 </section>
